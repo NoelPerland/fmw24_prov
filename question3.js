@@ -4,12 +4,17 @@
 // funktionen behöver bara hantera en stor bokstav som input
 
 // Exempel:
-// filterNames(["John", "Mary", "Peter", "Jane"], "J") // Returnerar ["John", "Jane"]
-// filterNames(["John", "Mary", "Peter", "Jane"], "P") // Returnerar ["Peter"]
-// filterNames(["John", "Mary", "Peter", "Jane"], "X") // Returnerar []
+//filterNames(["John", "Mary", "Peter", "Jane"], "J"); // Returnerar ["John", "Jane"]
+/* filterNames(["John", "Mary", "Peter", "Jane"], "P"); // Returnerar ["Peter"]
+filterNames(["John", "Mary", "Peter", "Jane"], "X"); // Returnerar [] */
 
 function filterNames(names, letter) {
-  // Din kod här
+  return names.filter((name) => name.startsWith(letter));
 }
+
+// Testa funktionen
+console.log(filterNames(["John", "Mary", "Peter", "Jane"], "J")); // Returnerar ["John", "Jane"]
+console.log(filterNames(["John", "Mary", "Peter", "Jane"], "P")); // Returnerar ["Peter"]
+console.log(filterNames(["John", "Mary", "Peter", "Jane"], "X")); // Returnerar []
 
 module.exports = filterNames;

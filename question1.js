@@ -26,7 +26,22 @@ const taxedCars = [
 ];
 
 function totalTax(cars) {
-  // Din kod här
+  let total = 0;
+  cars.forEach((car) => {
+    const hour = getHour(car.time);
+    if (hour >= 6 && hour <= 6) {
+      total += 30;
+    } else if (hour >= 7 && hour <= 7) {
+      total += 45;
+    } else if (hour >= 8 && hour <= 8) {
+      total += 30;
+    } else if (hour >= 9 && hour < 19) {
+      total += 20;
+    }
+  });
+  return total;
 }
 
 module.exports = totalTax;
+
+console.log(totalTax(taxedCars));

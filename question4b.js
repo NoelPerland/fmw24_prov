@@ -10,10 +10,11 @@ const product2 = {
 };
 
 function updatePriceWithDiscount(product, discount) {
-  // Din kod här
+  const discountedPrice = product.price * (1 - discount / 100);
+  return { ...product, price: discountedPrice };
 }
 
-// console.log(updatePriceWithDiscount(product2, 10));
+console.log(updatePriceWithDiscount(product2, 10));
 // Output: { name: "Laptop", price: 13500, brand: "TechBrand" }
 // Uträkning: ((100 - discount)/100) * price = rabbaterat pris
 

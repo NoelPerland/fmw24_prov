@@ -10,11 +10,11 @@ const book = {
   year: 1960,
 };
 
-function getBookInfo(book) {
-  // Din kod här
+function getBookInfo({ title, author }) {
+  return `Titel: ${title}, Författare: ${author}`;
 }
 
-// console.log(getBookInfo(book));
-// Output: "Titel: To Kill a Mockingbird, Författare: Harper Lee"
+console.log(getBookInfo(book));
+("Titel: To Kill a Mockingbird, Författare: Harper Lee");
 
 module.exports = getBookInfo;
